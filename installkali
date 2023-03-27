@@ -1,0 +1,56 @@
+#!/usr/bin/bash
+#Author: Bishal singh -Anon4You
+#Alienlkrishn
+
+printf "\a\e[34m
+#    #    #    #       ###    #       ### #     # #     # #     #
+#   #    # #   #        #     #        #  ##    # #     #  #   #
+#  #    #   #  #        #     #        #  # #   # #     #   # #
+###    #     # #        #     #        #  #  #  # #     #    #
+#  #   ####### #        #     #        #  #   # # #     #   # #
+#   #  #     # #        #     #        #  #    ## #     #  #   #
+#    # #     # ####### ###    ####### ### #     #  #####  #     #
+
+\e0mkali-linux inataller script by \e[32mAlienkrishn \e[0m
+
+"
+CHROOT=$PREFIX/var/lib/proot-distro/installed-rootfs/debian
+
+if [[ -d "$PREFIX/var/lib/proot-distro/installed-rootfs/debian"  ]]; then
+    printf "\e[33;1mExisting debian found reseting it\e[0m"
+    proot-distro reset debian
+else
+    echo -e "--- Installing requirements"
+    apt update && apt upgrade -y
+    apt install proot-distro -y
+    echo -e "-- installing debian and converting to kali"
+    proot-distro install debian
+fi
+
+mv $CHROOT/root/.bashrc $CHROOT/root/.bashrcx
+cat > $CHROOT/root/.bashrc <<- EOF
+apt-get update -y
+apt install gnupg curl -y
+rm -rf /etc/apt/sources.list
+echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
+curl -sSL https://archive.kali.org/archive-key.asc | apt-key add
+apt-get update -y && apt-get dist-upgrade -y
+apt-get install sudo -y
+# Adding user
+useradd -m -s /bin/bash kali
+echo "kali:kali" | chpasswd
+echo "kali  ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/kali
+rm .bashrc
+mv .bashrcx .bashrc
+sleep 1
+exit
+EOF
+proot-distro login debian
+echo "proot-distro login --user kali debian" > $PATH/kalilinux
+chmod +x $PATH/kalilinux
+clear
+echo -e "
+just type kalilinux to login to kali
+default password for sudo is kali
+Author: Bishal Singh ~Alienkrishn
+"

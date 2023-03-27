@@ -11,7 +11,7 @@ printf "\a\e[34m
 #   #  #     # #        #     #        #  #    ## #     #  #   #
 #    # #     # ####### ###    ####### ### #     #  #####  #     #
 
-\e0mkali-linux inataller script by \e[32mAlienkrishn \e[0m
+\e[0mkali-linux inataller script by \e[32mAlienkrishn \e[0m
 
 "
 CHROOT=$PREFIX/var/lib/proot-distro/installed-rootfs/debian

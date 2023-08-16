@@ -15,7 +15,7 @@ printf "\a\e[34m
 
 "
 command -v x11-repo > /dev/null 2>&1 || { echo >&2 "x11-repo not found!, Installing... x11-repo"; apt install x11-repo -y 1; }
-command -v xwayland > /dev/null 2>&1 || { echo >&2 "installing termux-x11"; apt install termux-x11-nightly xwaland dbus -y 1; }
+command -v xwayland > /dev/null 2>&1 || { echo >&2 "installing termux-x11"; apt install termux-x11-nightly xwayland dbus -y 1; }
 
 CHROOT=$PREFIX/var/lib/proot-distro/installed-rootfs/debian
 

@@ -14,6 +14,9 @@ printf "\a\e[34m
 \e[0mkali-linux inataller script by \e[32mAlienkrishn \e[0m
 
 "
+command -v x11-repo > /dev/null 2>&1 || { echo >&2 "x11-repo not found!, Installing... x11-repo"; apt install x11-repo -y 1; }
+command -v xwayland > /dev/null 2>&1 || { echo >&2 "installing termux-x11"; apt install termux-x11-nightly xwaland dbus -y 1; }
+
 CHROOT=$PREFIX/var/lib/proot-distro/installed-rootfs/debian
 
 if [[ -d "$PREFIX/var/lib/proot-distro/installed-rootfs/debian"  ]]; then
@@ -27,7 +30,7 @@ else
     proot-distro install debian
 fi
 
-mv $CHROOT/root/.bashrc $CHROOT/root/.bashrcx
+rm $CHROOT/root/.bashrc 
 cat > $CHROOT/root/.bashrc <<- EOF
 apt-get update -y
 apt install gnupg curl -y
@@ -35,22 +38,29 @@ rm -rf /etc/apt/sources.list
 echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
 curl -sSL https://archive.kali.org/archive-key.asc | apt-key add
 apt-get update -y && apt-get dist-upgrade -y
-apt-get install sudo -y
+apt-get install sudo figlet -y
 # Adding user
 useradd -m -s /bin/bash kali
 echo "kali:kali" | chpasswd
 echo "kali  ALL=(ALL:ALL) ALL" >> /etc/sudoers.d/kali
 rm .bashrc
-mv .bashrcx .bashrc
+curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/.bashrc
+cp .bashrc /home/kali
 sleep 1
 exit
 EOF
 proot-distro login debian
-echo "proot-distro login --user kali debian" > $PATH/kalilinux
+curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/xstart
+mv xstart $PATH && chmod +x $PATH/xstart
+echo "proot-distro login --user kali debian --shared-tmp" > $PATH/kalilinux
 chmod +x $PATH/kalilinux
 clear
 echo -e "
+NOTE
+
 just type kalilinux to login to kali
 default password for sudo is kali
-Author: Bishal Singh ~Alienkrishn
+Author: Alienkrishn 
+
+
 "

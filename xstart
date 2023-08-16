@@ -1,0 +1,8 @@
+#!/bin/bash
+termux-x11 :1 -xstartup "dbus-launch --exit-with-session xfce4-session" > /dev/null 2>&1 &
+printf "Starting termux-x11\r" ; sleep 0.2
+printf "Starting termux-x11.\r" ; sleep 0.2
+printf "Starting termux-x11..\r" ; sleep 0.2
+printf "Starting termux-x11...\r" ; sleep 0.2
+printf "Starting termux-x11....\r" ; sleep 0.2
+echo -e "\nTermux-x11 started."

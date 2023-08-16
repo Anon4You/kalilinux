@@ -7,7 +7,7 @@ echo "KaliLinux for termux-x11 by Alienkrishn
 commamds:-
 xstart - To start termux-x11 gui
 myip   - To now your ipaddress information
-Note   - Default password for sudo is alien"
+Note   - Default password for sudo is kali"
 
 # If not running interactively, don't do anything
 case $- in

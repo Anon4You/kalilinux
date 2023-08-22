@@ -15,7 +15,7 @@ case $- in
     *i*) ;;
       *) return;;
 esac
-alias desktop="sudo apt install xfce4 xfce4-terminal xfce4-whiskermenu-plugin -y"
+alias desktop="sudo apt install xwayland xfce4 xfce4-terminal xfce4-whiskermenu-plugin -y"
 alias myip="curl ip-api.com"
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options

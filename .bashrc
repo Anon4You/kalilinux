@@ -8,6 +8,7 @@ commands:-
 desktop - To install xfce4-desktop 
 xstart  - To start termux-x11 gui
 myip    - To now your ipaddress information
+termux  - Go to termux home directory 
 Note    - Default password for sudo is kali"
 
 # If not running interactively, don't do anything
@@ -17,6 +18,7 @@ case $- in
 esac
 alias desktop="sudo apt install xwayland xfce4 xfce4-terminal xfce4-whiskermenu-plugin -y"
 alias myip="curl ip-api.com"
+alias termux="cd /data/data/com.termux/files/home"
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth

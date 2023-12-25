@@ -19,6 +19,12 @@ command -v xwayland > /dev/null 2>&1 || { echo >&2 "installing termux-x11"; apt 
 
 CHROOT=$PREFIX/var/lib/proot-distro/installed-rootfs/debian
 
+curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/xstart
+mv xstart $PATH && chmod +x $PATH/xstart
+echo "proot-distro login --user kali debian --shared-tmp" > $PATH/kalilinux
+chmod +x $PATH/kalilinux
+
+
 if [[ -d "$PREFIX/var/lib/proot-distro/installed-rootfs/debian"  ]]; then
     printf "\e[33;1mExisting debian found reseting it\e[0m"
     proot-distro reset debian
@@ -48,15 +54,6 @@ rm .bashrc
 curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/.bashrc
 cp .bashrc /home/kali
 sleep 1
-exit
-EOF
-proot-distro login debian
-curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/xstart
-mv xstart $PATH && chmod +x $PATH/xstart
-echo "proot-distro login --user kali debian --shared-tmp" > $PATH/kalilinux
-chmod +x $PATH/kalilinux
-clear
-
 echo -e "
 NOTE
 
@@ -64,5 +61,7 @@ just type kalilinux to login to kali
 default password for sudo is kali
 Author: Alienkrishn 
 
-
 "
+exit
+EOF
+proot-distro login debian

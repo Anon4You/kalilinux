@@ -37,6 +37,7 @@ apt install gnupg curl -y
 rm -rf /etc/apt/sources.list
 echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/apt/sources.list
 curl -sSL https://archive.kali.org/archive-key.asc | apt-key add
+mv /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 apt-get update -y && apt-get dist-upgrade -y
 apt-get install sudo figlet -y
 # Adding user
@@ -55,6 +56,7 @@ mv xstart $PATH && chmod +x $PATH/xstart
 echo "proot-distro login --user kali debian --shared-tmp" > $PATH/kalilinux
 chmod +x $PATH/kalilinux
 clear
+
 echo -e "
 NOTE
 

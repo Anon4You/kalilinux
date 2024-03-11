@@ -10,6 +10,6 @@
 curl -sSL https://raw.githubusercontent.com/Anon4You/kalilinux/main/installkali | bash
 ```
 ## Sound fixed ✅
-Now you can videos with sound on browser 
+Now you can watch videos with sound on browser 
 ## Follow me on Instagram
 * [Alienlrishn](https://www.instagram.com/alienkrishn/") 

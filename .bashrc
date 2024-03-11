@@ -16,7 +16,7 @@ case $- in
     *i*) ;;
       *) return;;
 esac
-alias desktop="sudo apt install xwayland kali-desktop-xfce -y"
+alias desktop="sudo apt install dbus-x11 xwayland kali-desktop-xfce -y"
 alias myip="curl ip-api.com"
 alias termux="cd /data/data/com.termux/files/home"
 # don't put duplicate lines or lines starting with space in the history.

@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#Author: Bishal singh -Anon4You
+#Author: Alienkrishn -Anon4You
 #Alienlkrishn
 
 printf "\a\e[34m
@@ -21,7 +21,7 @@ CHROOT=$PREFIX/var/lib/proot-distro/installed-rootfs/debian
 
 curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/xstart
 mv xstart $PATH && chmod +x $PATH/xstart
-echo "proot-distro login --user kali debian --shared-tmp" > $PATH/kalilinux
+echo -e "pulseaudio --start --load='module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1' --exit-idle-time=-1\nproot-distro login --user kali debian --shared-tmp" > $PATH/kalilinux
 chmod +x $PATH/kalilinux
 
 
@@ -48,7 +48,6 @@ echo "deb http://http.kali.org/kali kali-rolling main contrib non-free" > /etc/a
 curl -sSL https://archive.kali.org/archive-key.asc | apt-key add
 mv /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
 apt-get update -y && apt-get dist-upgrade -y
-apt-get install sudo figlet -y 
 rm .bashrc
 curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/.bashrc
 cp .bashrc /home/kali

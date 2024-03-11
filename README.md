@@ -9,6 +9,7 @@
 ```
 curl -sSL https://raw.githubusercontent.com/Anon4You/kalilinux/main/installkali | bash
 ```
-## Souud fixed ✅
+## Sound fixed ✅
+Now you can videos with sound on browser 
 ## Follow me on Instagram
 * [Alienlrishn](https://www.instagram.com/alienkrishn/") 

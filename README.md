@@ -9,7 +9,11 @@
 ```
 curl -sSL https://raw.githubusercontent.com/Anon4You/kalilinux/main/installkali | bash
 ```
-## Sound fixed ✅
-Now you can watch videos with sound on browser 
-## Follow me on Instagram
-* [Alienlrishn](https://www.instagram.com/alienkrishn/") 
+## Fixes 
+* Added user kali ✅
+* Pulseaudio sound fix ✅
+* Kali Linux full Desktop ✅
+* Works on Termux-X11 ✅
+
+## Wath more from me 
+* [YouTube](https://www.youtube.com/@alienkrishnorg") 

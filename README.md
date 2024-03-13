@@ -15,5 +15,5 @@ curl -sSL https://raw.githubusercontent.com/Anon4You/kalilinux/main/installkali 
 * Kali Linux full Desktop ✅
 * Works on Termux-X11 ✅
 
-## Wath more from me 
-* [YouTube](https://www.youtube.com/@alienkrishnorg") 
+## Watch more from me 
+* [YouTube](https://www.youtube.com/@alienkrishnorg) 

@@ -1,4 +1,4 @@
-# kalilinux V-1.1
+# Kali Linux on Termux 
 > This script will install debian and convert it to kali linux and add default user kali on your termux enjoy kali in less than 50mb
 
 <img src="Screenshot_2024-03-12_08-31-24.png"/>

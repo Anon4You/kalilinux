@@ -14,6 +14,7 @@ curl -sSL https://raw.githubusercontent.com/Anon4You/kalilinux/main/installkali 
 * Pulseaudio sound fix ✅
 * Kali Linux full Desktop ✅
 * Works on Termux-X11 ✅
+* Added new sources of kali ✅
 
 ## Watch more from me 
 * [YouTube](https://www.youtube.com/@alienkrishnorg) 

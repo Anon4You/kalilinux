@@ -6,7 +6,7 @@ figlet KaliLinux
 echo "KaliLinux for termux-x11 by Alienkrishn
 commands:-
 desktop - To install xfce4-desktop 
-xstart  - To start termux-x11 gui
+xstart & - To start termux-x11 gui
 myip    - To now your ipaddress information
 termux  - Go to termux home directory 
 Note    - Default password for sudo is kali"

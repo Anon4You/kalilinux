@@ -15,6 +15,7 @@ curl -sSL https://raw.githubusercontent.com/Anon4You/kalilinux/main/installkali 
 * Kali Linux full Desktop ✅
 * Works on Termux-X11 ✅
 * Added new sources of kali ✅
+* cannot open shared object file: No such file or directory ✅
 
 ## Watch more from me 
 * [YouTube](https://www.youtube.com/@alienkrishnorg) 

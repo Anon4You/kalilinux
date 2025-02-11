@@ -19,7 +19,7 @@ command -v xwayland > /dev/null 2>&1 || { echo >&2 "installing termux-x11"; apt 
 
 CHROOT=$PREFIX/var/lib/proot-distro/installed-rootfs/debian
 
-curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/xstart
+curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/assets/xstart
 mv xstart $PATH && chmod +x $PATH/xstart
 echo -e "pulseaudio --start --load='module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1' --exit-idle-time=-1\nproot-distro login --user kali debian --shared-tmp" > $PATH/kalilinux
 chmod +x $PATH/kalilinux

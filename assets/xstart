@@ -1,4 +1,0 @@
-#!/bin/bash
-termux-x11 :1 &
-sleep 2
-env DISPLAY=:1 dbus-launch --exit-with-session xfce4-session > /dev/null 2>&1 

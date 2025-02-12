@@ -1,16 +1,6 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
-clear
-figlet KaliLinux
-echo "KaliLinux for termux-x11 by Alienkrishn
-commands:-
-desktop - To install xfce4-desktop 
-xstart & - To start termux-x11 gui
-myip    - To now your ipaddress information
-termux  - Go to termux home directory 
-Note    - Default password for sudo is kali"
-
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;

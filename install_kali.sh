@@ -29,7 +29,7 @@ ${red}NOTE: ${cyan}Kali Linux installed successfuly execute ${green}'kalilinux' 
 ${yellow}Report issus here: ${blue}https://github.com/Anon4You/kalilinux/issues/new 
 
 ${yellow}For usage kindly visit the readme file of this repository
-${white}From here: ${green}https://github.com/Anon4You/kalilinux?tab=readme-ov-file#usage ${reset}
+${white}From here: ${green}https://github.com/Anon4You/kalilinux?tab=readme-ov-file#usage-%EF%B8%8F ${reset}
 }
 "
 }

@@ -85,7 +85,8 @@ kalilinux
 
 ## Run kali desktop on termux-x11
 
-- Execute `kalilinux` in termux and login into kali shell then
+- Execute `kalilinux` in termux and login into kali shell then,
+run:
 ```bash
 x11-start
 ```

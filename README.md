@@ -1,6 +1,12 @@
+Here’s a revised version of the README with added emojis and a more polished tone:
+
 # Kali Linux Installer for Termux 🐧
 
 This repository provides a simple Bash script to install Kali Linux on Termux, enabling users to run either a command line interface (CLI) or a graphical user interface (GUI) version. The script automates the setup process and ensures all necessary dependencies are installed efficiently. 
+
+## Direct install
+- command-line `bash <(curl -sL is.gd/alienkrishn_kalilinux) --CLI`
+- Gui-installation 'bash <(curl -sL is.gd/alienkrishn_kalilinux) --GUI'
 
 ## Screenshot 📸
 

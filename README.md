@@ -1,6 +1,8 @@
-# Kali Linux Installer for Termux
+Here’s a revised version of the README with added emojis and a more polished tone:
 
-This repository provides a simple Bash script to install Kali Linux on Termux, allowing users to run either a command line interface (CLI) or a graphical user interface (GUI) version. The script automates the setup process and ensures all necessary dependencies are installed.
+# Kali Linux Installer for Termux 🐧
+
+This repository provides a simple Bash script to install Kali Linux on Termux, enabling users to run either a command line interface (CLI) or a graphical user interface (GUI) version. The script automates the setup process and ensures all necessary dependencies are installed efficiently. 
 
 ## Screenshot 📸
 
@@ -8,25 +10,25 @@ This repository provides a simple Bash script to install Kali Linux on Termux, a
 <summary>Click to view the screenshot</summary>
 
 <p align="center">
-  <img src="assets/screenshot.jpg">
+  <img src="assets/screenshot.jpg" alt="Kali Linux on Termux">
 </p>
 
 </details>
 
-## Features
+## Features ✨
 
-- **CLI Installation**: Set up a command line version of Kali Linux within Termux.
-- **GUI Installation**: Install Kali Linux with a graphical Xfce desktop environment.
-- **Easy Usage**: Simple command-line arguments to choose the installation type.
-- **User Creation**: Automatically creates a user for accessing the Kali environment.
-- **Environment Setup**: Configures all necessary repositories and dependencies for smooth operation.
+- **CLI Installation**: Quick setup for a command line version of Kali Linux.
+- **GUI Installation**: Install a graphical Xfce desktop environment.
+- **Easy Usage**: User-friendly command-line options for installation type selection.
+- **User Creation**: Automatically sets up a user for accessing the Kali environment.
+- **Environment Setup**: Configures necessary repositories and dependencies for smooth operation.
 
-## Requirements
+## Requirements ✅
 
 - [Termux](https://termux.com/)
 - Internet connection
 
-## Installation
+## Installation 🚀
 
 To get started, clone this repository and navigate to the directory:
 
@@ -41,13 +43,13 @@ Make the script executable:
 chmod +x install_kali.sh
 ```
 
-## Usage
+## Usage 🛠️
 
-Run the script with one of the following options:
+Run the script using one of the following options:
 
 ### CLI Installation
 
-To install the command line version of Kali Linux, execute:
+For the command line version, execute:
 
 ```bash
 ./install_kali.sh --CLI
@@ -55,7 +57,7 @@ To install the command line version of Kali Linux, execute:
 
 ### GUI Installation
 
-To install the graphical version of Kali Linux, execute:
+For the graphical version, execute:
 
 ```bash
 ./install_kali.sh --GUI
@@ -63,38 +65,46 @@ To install the graphical version of Kali Linux, execute:
 
 ### Help
 
-For help and usage information, run:
+To get help and usage information, run:
 
 ```bash
 ./install_kali.sh --help
 ```
 
-## Post Installation
+## Post Installation 🖥️
 
-- After installation, you can log into the Kali environment by executing:
+- To log into the Kali environment after installation, execute:
 
 ```bash
 kalilinux
 ```
 
-- For GUI installation, make sure to download the Termux-X11 app from [here](https://github.com/termux/termux-x11/releases/tag/nightly).
+- For GUI installations, make sure to download the Termux-X11 app from the [official repository](https://github.com/termux/termux-x11/releases/tag/nightly).
 
-## Issues
+## Run kali desktop on termux-x11
+
+- Execute `kalilinux` in termux and login into kali shell then
+```bash
+x11-start
+```
+- open your termux-x11 app 
+
+## Issues ❗
 
 If you encounter any issues, please report them on the [GitHub Issues page](https://github.com/Anon4You/kalilinux/issues/new).
 
-## Contribution
+## Contribution 🤝
 
-Feel free to fork the repository and submit pull requests for improvements or additional features!
+Contributions are welcome! Feel free to fork the repository and submit pull requests for enhancements or additional features.
 
-## License
+## License 📜
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Author
+## Author ✍️
 
 **Alienkrishn** (Anon4You)
 
 ---
 
-Enjoy your Kali Linux experience on Termux!
+Enjoy your Kali Linux experience on Termux! 🌟

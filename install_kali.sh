@@ -75,7 +75,7 @@ echo -e '#!/usr/bin/env bash
 export DISPLAY=:1
 export PULSE_SERVER=127.0.0.1
 startxfce4
-' > /usr/bin/x11start && chmod +x /usr/bin/x11start 
+' > /usr/bin/x11-start && chmod +x /usr/bin/x11-start 
 sleep 1 
 exit\n" > ${CHROOT}/root/.bashrc 
   proot-distro login debian

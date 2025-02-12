@@ -56,7 +56,7 @@ exit\n" > ${CHROOT}/root/.bashrc
 Install_gui(){
   [ -e $PREFIX/etc/apt/sources.list.d/x11.list ] || { printf "${green}\nx11-repo not found!, Installing... x11-repo\n${reset}"; apt install x11-repo -y 1; }
   command -v termux-x11 > /dev/null 2>&1 || { printf "${green}\ntermux-x11 not found!, Installing...termux-x11\n${reset}"; apt install termux-x11-nightly -y 1; }
-  command -v dbus > /dev/null 2>&1 || { printf "${green}\ndbus not found!, Installing...dbus\n${reset}"; apt install dbus -y 1; }
+  command -v dbus > /dev/null 2>&1 || { printf "${green}\ndbus not found!, Installing...dbus\n${reset}"; apt install dbus pulseaudio -y 1; }
   echo -e "
 apt-get update -y
 apt install gnupg sudo curl -y

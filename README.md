@@ -45,6 +45,11 @@ The previous error you'd see:
 E: The repository 'https://http.kali.org/kali kali-rolling Release' 
 is not signed because the public key is not available: NO_PUBKEY ED444FF07D8D0BF6
 ```
+## ⚠️ Important Note
+if `x11-start' not working try installing dependencies manually by executing this command in kali
+```
+sudo apt install dbus-x11 xwayland kali-desktop-xfce pulseaudio -y
+```
 
 ## 📜 Everything Else Unchanged
 - Same simple installation process

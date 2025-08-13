@@ -2,7 +2,15 @@
 
 ##  Kali Linux :  Automated script to install kali linux in termux 
 ##  Author    : 	Alienkrishn [Anon4You]
-##  Updated   : 	2025.5.28
+
+##  Updated   : 	2025.08.14
+
+## Provides ##
+# PRETTY_NAME="Kali GNU/Linux Rolling"
+# NAME="Kali GNU/Linux"
+# VERSION_ID="2025.2"
+# VERSION="2025.2"
+# VERSION_CODENAME=kali-rolling
 
 clear
 CHROOT="$PREFIX/var/lib/proot-distro/installed-rootfs/debian/"
@@ -66,10 +74,9 @@ install_dependencies() {
 Install_cli() {
   echo -e "
 apt-get update -y
-apt install gnupg sudo curl -y
+apt install sudo curl -y
 echo 'deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware' > /etc/apt/sources.list
-curl -sSL https://archive.kali.org/archive-key.asc | apt-key add
-mv /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
+curl -o /etc/apt/trusted.gpg.d/archive-keyring.gpg https://archive.kali.org/archive-keyring.gpg
 apt-get update -y && apt-get dist-upgrade -y
 useradd -m -s /bin/bash kali
 echo 'kali:kali' | chpasswd 
@@ -85,11 +92,10 @@ exit\n" > ${CHROOT}/root/.bashrc
 Install_gui(){
   echo -e "
 apt-get update -y
-apt install gnupg sudo curl -y
+apt install sudo curl -y
 rm -rf /etc/apt/sources.list
-echo 'deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware' > /etc/apt/sources.list
-curl -sSL https://archive.kali.org/archive-key.asc | apt-key add
-mv /etc/apt/trusted.gpg /etc/apt/trusted.gpg.d
+echo 'deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware' > /etc/apt/sources.list 
+curl -o /etc/apt/trusted.gpg.d/archive-keyring.gpg https://archive.kali.org/archive-keyring.gpg
 apt-get update -y && apt-get dist-upgrade -y
 apt install dbus-x11 xwayland kali-desktop-xfce pulseaudio -y
 curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/assets/.bashrc

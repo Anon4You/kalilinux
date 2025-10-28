@@ -64,7 +64,8 @@ install_dependencies() {
   # For GUI version, install additional packages
   if [[ ${args} == --GUI ]]; then
     printf "${yellow}\nInstalling GUI dependencies...\n${reset}"
-    apt install -y x11-repo termux-x11-nightly dbus pulseaudio
+    apt install -y x11-repo
+    apt instsll -y termux-x11-nightly dbus pulseaudio
   fi
   
   printf "${green}\nDependencies installed successfully!\n${reset}"

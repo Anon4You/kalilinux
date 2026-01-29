@@ -17,10 +17,10 @@ The installer has been updated to work with Kali's new 2025 archive signing key
 `bash <(curl -sL is.gd/alienkrishn_kalilinux) --GUI
 `
 
-## 🛠️ What's New (July 2025)
+## 🛠️ What's New
 - ✅ Fixed repository signing key (2025 update)
 - ✅ Working `apt update` and `apt install`
-- ✅ All Kali 2025.2 tools available
+- ✅ All Kali 2025.4 tools available
 - ✅ Better ARM64 compatibility
 
 ## ✨ Features

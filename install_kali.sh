@@ -3,13 +3,13 @@
 ##  Kali Linux :  Automated script to install kali linux in termux 
 ##  Author    : 	Alienkrishn [Anon4You]
 
-##  Updated   : 	2025.08.14
+##  Updated   : 	2026.01.29
 
 ## Provides ##
 # PRETTY_NAME="Kali GNU/Linux Rolling"
 # NAME="Kali GNU/Linux"
-# VERSION_ID="2025.2"
-# VERSION="2025.2"
+# VERSION_ID="2025.4"
+# VERSION="2025.4"
 # VERSION_CODENAME=kali-rolling
 
 clear

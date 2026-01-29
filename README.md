@@ -1,4 +1,4 @@
-# 🐧 Kali Linux Installer for Termux (2025.2)
+# 🐧 Kali Linux Installer for Termux (2025.4)
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Termux Supported](https://img.shields.io/badge/Termux-Supported-brightgreen)](https://termux.com)

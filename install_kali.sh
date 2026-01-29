@@ -165,7 +165,7 @@ ${green}Author: ${white}Alienkrishn [Anon4You]\n${reset}
   elif [[ ${args} == --GUI ]]; then
     check_chroot
     Install_gui
-    printf "#!/usr/bin/env bash \ntermux-x11 :1 &\npulseaudio --start --load='module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1' --exit-idle-time=-1\nproot-distro login --user kali debian --shared-tmp\n" > $PREFIX/bin/kalilinux
+    printf "#!/usr/bin/env bash \npkill -f com.termux.x11.Loader\npkill -f pulseaudio\ntermux-x11 :1 &\npulseaudio --start --load='module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1' --exit-idle-time=-1\nproot-distro login --user kali debian --shared-tmp\n" > $PREFIX/bin/kalilinux
     chmod +x $PREFIX/bin/kalilinux
     Info
     printf "\n${yellow}Please download and install Termux-x11 app from:${reset}"

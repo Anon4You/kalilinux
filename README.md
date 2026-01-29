@@ -2,7 +2,7 @@
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Termux Supported](https://img.shields.io/badge/Termux-Supported-brightgreen)](https://termux.com)
-[![Kali 2025 Verified](https://img.shields.io/badge/Kali-2025.2%20Verified-blueviolet)](https://www.kali.org)
+[![Kali 2025 Verified](https://img.shields.io/badge/Kali-2025.4%20Verified-blueviolet)](https://www.kali.org)
 
 **Now with fixed 2025 repository signing keys**  
 The installer has been updated to work with Kali's new 2025 archive signing key

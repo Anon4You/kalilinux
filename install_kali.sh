@@ -98,7 +98,7 @@ rm -rf /etc/apt/sources.list
 echo 'deb http://http.kali.org/kali kali-rolling main contrib non-free non-free-firmware' > /etc/apt/sources.list 
 curl -o /etc/apt/trusted.gpg.d/archive-keyring.gpg https://archive.kali.org/archive-keyring.gpg
 apt-get update -y && apt-get dist-upgrade -y
-apt install dbus-x11 xwayland kali-desktop-xfce pulseaudio -y
+apt install dbus-x11 xwayland xfce4-terminal kali-desktop-xfce pulseaudio -y
 curl -LO https://raw.githubusercontent.com/Anon4You/kalilinux/main/assets/.bashrc
 useradd -m -s /bin/bash kali
 echo 'kali:kali' | chpasswd 

@@ -35,12 +35,7 @@ cd kalilinux && bash install_kali.sh
 
 ## Screenshot
 
-<details>
-  <summary>Click to view the screenshot</summary>
-
-  <img src="assets/screenshot.jpg" alt="Kali Linux on Termux">
-
-</details>
+<img src="assets/screenshot.jpg" alt="Kali Linux on Termux">
 
 ## Usage
 

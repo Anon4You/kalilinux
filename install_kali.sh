@@ -112,7 +112,7 @@ verify_clean() {
 fresh_install() {
     echo "== host: recreating distro ${DISTRO} =="
     proot-distro list 2>&1 | grep -qE "^  \* ${DISTRO}([[:space:]]|$)" && proot-distro remove "$DISTRO"
-    proot-distro install "$DISTRO"
+    proot-distro install "kalilinux/$DISTRO"
 }
 
 bootstrap() {

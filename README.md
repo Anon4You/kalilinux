@@ -1,59 +1,82 @@
-# 🐧 Kali Linux Installer for Termux (2025.4)
+# Kali Linux Installer for Termux (proot-distro)
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Termux Supported](https://img.shields.io/badge/Termux-Supported-brightgreen)](https://termux.com)
-[![Kali 2025 Verified](https://img.shields.io/badge/Kali-2025.4%20Verified-blueviolet)](https://www.kali.org)
+[![Kali Rolling](https://img.shields.io/badge/Kali-Rolling-blueviolet)](https://www.kali.org)
 
-**Now with fixed 2025 repository signing keys**  
-The installer has been updated to work with Kali's new 2025 archive signing key
+A simple Bash script to install **Kali Linux (rolling) with an XFCE4 desktop** on Termux using `proot-distro`. It survives the systemd-under-proot postinst failures that break naive installs.
 
-## 📥 Installation
+## Installation
 
+Run this in Termux (no root required):
 
-# CLI Version
-`bash <(curl -sL is.gd/alienkrishn_kalilinux) --CLI
-`
-# GUI Version 
-`bash <(curl -sL is.gd/alienkrishn_kalilinux) --GUI
-`
-
-## 🛠️ What's New
-- ✅ Fixed repository signing key (2025 update)
-- ✅ Working `apt update` and `apt install`
-- ✅ All Kali 2025.4 tools available
-- ✅ Better ARM64 compatibility
-
-## ✨ Features
-- **Your Options**:
-  - `--CLI` for command-line version
-  - `--GUI` for Xfce desktop
-- **New Under the Hood**:
-  - Updated Kali GPG keys
-  - Fixed package verification
-  - 2025 repository support
-
-## 🚀 Usage (Same as Before)
 ```bash
-kalilinux  # Enter environment (unchanged)
-x11-start  # For GUI version (original command)
+bash <(curl -sL is.gd/alienkrishn_kalilinux)
 ```
 
-## ⚠️ Important Fix
-The script now includes Kali's **2025 signing key** that was added after:
-```text
-The previous error you'd see:
-E: The repository 'https://http.kali.org/kali kali-rolling Release' 
-is not signed because the public key is not available: NO_PUBKEY ED444FF07D8D0BF6
-```
-## ⚠️ Important Note
-if `x11-start' not working try installing dependencies manually by executing this command in kali
-```
-sudo apt install dbus-x11 xwayland kali-desktop-xfce pulseaudio -y
+Or clone this repo and run the script directly:
+
+```bash
+git clone https://github.com/Anon4You/kalilinux
+cd kalilinux && bash install_kali.sh
 ```
 
-## 📜 Everything Else Unchanged
-- Same simple installation process
-- Same commands you're familiar with
-- Now just works with 2025 repositories
+## What it does
 
-## Maintained by [Alienkrishn](https://github.com/Anon4You)  
+**On the Termux host** (`pkg`):
+- Installs `proot-distro`, `x11-repo`, `termux-x11-nightly`, `dbus`, and `pulseaudio`
+
+**Inside the container**:
+- Installs the `kali-rolling` rootfs via `proot-distro`
+- Creates user `kali` with password `kali` and full sudo access
+- Installs XFCE4 desktop (`kali-desktop-xfce`), Xwayland, and PulseAudio
+- Patches systemd postinst failures (shims `systemctl`, `udevadm`, etc.)
+- Wires X11/audio env and creates a `kalilinux` launcher
+
+## Screenshot
+
+<details>
+  <summary>Click to view the screenshot</summary>
+
+  <img src="assets/screenshot.jpg" alt="Kali Linux on Termux">
+
+</details>
+
+## Usage
+
+1. Install the **Termux:X11** app from https://github.com/termux/termux-x11/releases
+2. Start the app, then run:
+   ```bash
+   kalilinux
+   ```
+3. Inside Kali, start the desktop:
+   ```bash
+   startxfce4
+   ```
+
+The launcher starts `termux-x11` + PulseAudio and logs you in as `kali` (password: `kali`). `DISPLAY=:1` is set automatically.
+
+## Options (env overrides)
+
+| Env variable | Default | Description |
+| --- | --- | --- |
+| `DISTRO` | `kali-rolling` | proot-distro name to install |
+| `KALI_USER` | `kali` | Desktop user to create |
+| `KALI_PASS` | `kali` | Password for that user |
+| `FRESH` | `0` | Set to `1` to wipe + recreate the distro first |
+| `DESKTOP_PKGS` | `dbus-x11 xwayland xfce4-terminal kali-desktop-xfce pulseaudio` | Desktop packages to install |
+
+Example:
+
+```bash
+FRESH=1 KALI_PASS=changeme bash install_kali.sh
+```
+
+## Uninstall / reset
+
+```bash
+proot-distro remove kali-rolling   # or: proot-distro reset kali-rolling
+rm $PREFIX/bin/kalilinux
+```
+
+## Maintained by [Alienkrishn](https://github.com/Anon4You)

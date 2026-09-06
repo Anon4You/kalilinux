@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/nethunter.png" alt="Kali NetHunter">
+</p>
+
 # Kali Linux Installer for Termux (proot-distro)
 
 [![GitHub License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -32,10 +36,6 @@ cd kalilinux && bash install_kali.sh
 - Installs XFCE4 desktop (`kali-desktop-xfce`), Xwayland, and PulseAudio
 - Patches systemd postinst failures (shims `systemctl`, `udevadm`, etc.)
 - Wires X11/audio env and creates a `kalilinux` launcher
-
-## Screenshot
-
-<img src="assets/screenshot.jpg" alt="Kali Linux on Termux">
 
 ## Usage
 

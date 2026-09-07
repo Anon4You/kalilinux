@@ -206,7 +206,7 @@ finish() {
 
 install_host_deps
 command -v proot-distro >/dev/null 2>&1 || die "run me inside Termux (proot-distro missing)"
-[ "${FRESH:-0}" = "1" ] && fresh_install
+fresh_install
 patch_binaries
 sysusers_bootstrap
 bootstrap

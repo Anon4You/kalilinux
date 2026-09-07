@@ -15,7 +15,7 @@ A simple Bash script to install **Kali Linux (rolling) with an XFCE4 desktop** o
 Run this in Termux (no root required):
 
 ```bash
-bash <(curl -sL is.gd/alienkrishn_kalilinux)
+curl -fsSL is.gd/alienkrishn_kalilinux | bash
 ```
 
 Or clone this repo and run the script directly:
